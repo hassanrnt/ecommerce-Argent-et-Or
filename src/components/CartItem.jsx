@@ -11,6 +11,12 @@ const CartItem = ({item}) => {
         <Link to={`/product/${id}`}>
         <img className='max-w-[80px]' src={image} alt=''/>
         </Link>
+        <div>
+          {/* title & remove icon */}
+          <div>
+          <Link to={`/product/${id}`}>{title}</Link>
+          </div>
+        </div>
       </div>
     </div>
   </div>;
