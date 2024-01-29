@@ -51,15 +51,18 @@ const CartProvider = ({ children }) => {
     });
     if (cartItem) {
       const newCart = cart.map(item =>{
-        if(item.id === id) {
-          return{...item, amount: cartItem.amount -1}
-        }else{
+        if (item.id === id) {
+          const newAmount = Math.max(cartItem.amount - 1, 1);
+          return { ...item, amount: newAmount };
+        }
+        
+        else{ 
           return item;
         }
       });
       setCart(newCart);
     }else{
-      if(cartItem,amount < 2){
+      if(cartItem.amount < 2){
         removeFromCart(id);
       }
     }
