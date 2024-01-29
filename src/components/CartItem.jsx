@@ -6,7 +6,7 @@ import{IoMdClose, IoMdRemove, IoMdAdd} from'react-icons/io';
 // import cart context
 import {CartContext} from'../contexts/CartContext'
 const CartItem = ({item}) => {
-const { removeFromCart } = useContext(CartContext)
+const { removeFromCart, increaseAmount } = useContext(CartContext)
   // destructure item
   const {id, title, image, price, amount} = item;
   return (
@@ -24,11 +24,11 @@ const { removeFromCart } = useContext(CartContext)
             </div>
             <div className='flex gap-x-2 h-[36px] text-sm'>
               <div className='flex flex-1 max-w-[100px] items-center h-full border text-primary font-medium '>
-                <div className='flex-1 flex justify-center items-center cursor-pointer'>
+                <div  className='flex-1 flex justify-center items-center cursor-pointer'>
                   <IoMdRemove />
                 </div>
                 <div className='h-full flex justify-center items-center px-2'>{amount}</div>
-                <div className='flex-1 h-full flex justify-center items-center cursor-pointer'>
+                <div  onClick ={()=> increaseAmount(id)}className='flex-1 h-full flex justify-center items-center cursor-pointer'>
                   <IoMdAdd />
                 </div>
 

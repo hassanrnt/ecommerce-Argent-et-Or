@@ -37,9 +37,14 @@ const CartProvider = ({ children }) => {
   const clearCart = ()=> {
     setCart([]);
   };
+
+  // increase amount
+  const increaseAmount = (id) =>{
+    console.log('amount increased');
+  }
   
   return (
-    <CartContext.Provider value={{cart,addToCart,removeFromCart,clearCart}}>{children}</CartContext.Provider>
+    <CartContext.Provider value={{cart,addToCart,removeFromCart,clearCart,increaseAmount}}>{children}</CartContext.Provider>
   );
 };
 
