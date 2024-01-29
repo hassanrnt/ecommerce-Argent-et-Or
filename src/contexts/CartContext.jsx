@@ -31,10 +31,15 @@ const CartProvider = ({ children }) => {
       return item.id !== id;
     })
     setCart(newCart);
-  }
+  };
+
+  // clear cart 
+  const clearCart = ()=> {
+    setCart([]);
+  };
   
   return (
-    <CartContext.Provider value={{cart,addToCart,removeFromCart}}>{children}</CartContext.Provider>
+    <CartContext.Provider value={{cart,addToCart,removeFromCart,clearCart}}>{children}</CartContext.Provider>
   );
 };
 
