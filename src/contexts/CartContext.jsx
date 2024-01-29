@@ -43,9 +43,16 @@ const CartProvider = ({ children }) => {
     const item = cart.find(item => item.id === id);
     addToCart(item, id);
   };
-  
+
+  // decrease amount
+  const decreaseAmount = (id) =>{
+    const item = cart.find(item =>{
+      return item.id === id;
+    });
+    console.log(item);
+  };
   return (
-    <CartContext.Provider value={{cart,addToCart,removeFromCart,clearCart,increaseAmount}}>{children}</CartContext.Provider>
+    <CartContext.Provider value={{cart,addToCart,removeFromCart,clearCart,increaseAmount,decreaseAmount}}>{children}</CartContext.Provider>
   );
 };
 
