@@ -22,7 +22,7 @@ const Header = () => {
   });
   
   return (
-    <header className={`${isActive? 'bg-red-400' : 'bg-blue-400'} fixed w-full z-10 transition-all`}>
+    <header className={`${isActive? 'bg-white py-4 shadow-md' : 'bg-none py-6'} fixed w-full z-10 transition-all`}>
       <diV  className='container mx-auto flex items-center justify-between h-full'>
         
 
