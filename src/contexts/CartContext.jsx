@@ -7,6 +7,15 @@ const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   // item amount state
   const[itemAmount, setItemAmount] = useState(0)
+  // update item amount
+  useEffect(()=>{
+    if(cart) {
+    const amount = cart.reduce((accmulator, currentItem)=>{
+      return accmulator + currentItem.amount;
+    },0);
+    setItemAmount(amount);
+    }
+  }, [cart])
 
   const  addToCart = (product,id)=>{
     const newItem = { ...product,amount:1 };
