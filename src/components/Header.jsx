@@ -23,7 +23,7 @@ const Header = () => {
   
   return (
     <header className={`${isActive? 'bg-white py-4 shadow-md' : 'bg-none py-6'} fixed w-full z-10 transition-all`}>
-      <diV  className='container mx-auto flex items-center justify-between h-full'>
+      <div className='container mx-auto flex items-center justify-between h-full'>
         
 
       {/* Logo*/}
@@ -39,7 +39,7 @@ const Header = () => {
         <div className='bg-red-500 absolute-right-2-buttom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center'>{itemAmount}</div>
       </div>
 
-      </diV>
+      </div>
     </header>
   );
 };
