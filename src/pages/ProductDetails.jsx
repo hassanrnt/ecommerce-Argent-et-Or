@@ -17,7 +17,14 @@ const ProductDetails = () => {
   // get the single product based on the id
   const product = products.find(item =>{
     return item.id === parseInt(id);
-  })
+  });
+
+
+  // if product is not found
+  if (!product) {
+   return <section className='h-screen flex justify-center items-center'>
+    Loading...</section>;
+  }
   console.log(product);
 
   return <div>Product Details Page</div>;
