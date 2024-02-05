@@ -37,7 +37,7 @@ const ProductDetails = () => {
       </div>
       {/* text */}
       <div className='flex-1 text-center lg: text-left'>
-        <h1 className='text-[26px] font-medium mb-2 max-w-[450px] mx-auto'>{title}
+        <h1 className='text-[26px] font-medium mb-2 max-w-[450px] mx-auto lg:mx-0'>{title}
         </h1>
         <div className='text-x1 text-red-500 font-medium mb-6'>$ {price}
         </div>
