@@ -26,7 +26,7 @@ const ProductDetails = () => {
     Loading...</section>;
   }
    // destructure product
-   const {title, price, decription, image} = product;
+   const {title, price, description, image} = product;
   return <section className='pt-32 pb lg:py-32 h-screen flex items-center'>
     <div className="container mx-auro">
       {/* image & text wrapper */}
@@ -37,7 +37,11 @@ const ProductDetails = () => {
       </div>
       {/* text */}
       <div className='flex-1 text-center lg: text-left'>
-        <h1 className='text-[26px] font-medium mb-2 max-w-[450px] mx-auto'>{title}</h1>
+        <h1 className='text-[26px] font-medium mb-2 max-w-[450px] mx-auto'>{title}
+        </h1>
+        <div className='text-x1 text-red-500 font-medium mb-6'>$ {price}
+        </div>
+        <p>{description}</p>
       </div>
       </div>
     </div>
