@@ -41,7 +41,8 @@ const ProductDetails = () => {
         </h1>
         <div className='text-x1 text-red-500 font-medium mb-6'>$ {price}
         </div>
-        <p>{description}</p>
+        <p className='mb-8'>{description}</p>
+        <button onClick={()=> addToCart(product, product.id)} className='bg-pink-200 flex p-4 justify-center items-center text-white w-full font-medium'>Add to Cart</button>
       </div>
       </div>
     </div>
