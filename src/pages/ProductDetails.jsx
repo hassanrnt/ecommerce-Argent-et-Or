@@ -36,7 +36,9 @@ const ProductDetails = () => {
         <img  className=' max-w-[200px] lg:max-w-sm'src={image} alt=''/>
       </div>
       {/* text */}
-      <div>text</div>
+      <div className='flex-1 text-center lg: text-left'>
+        <h1 className='text-[26px] font-medium mb-2 max-w-[450px] mx-auto'>{title}</h1>
+      </div>
       </div>
     </div>
   </section>;
